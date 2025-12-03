@@ -2811,9 +2811,6 @@ h6 {
   transition: max-height 1.0s ease, opacity 0.5s ease;
 }
 
-
-  opacity: 1;
-} */
 .single-feature {
   height: 100%;
   display: flex;
@@ -2821,9 +2818,7 @@ h6 {
   justify-content: space-between;
 }
 
-
-
-Mobile: se expande automáticamente si tiene clase "active"
+/* Mobile: se expande automáticamente si tiene clase "active" */
 .feature-dropdown.active .feature-content {
   max-height: 300px;
   opacity: 1;
@@ -3080,22 +3075,197 @@ p {
 .primary-btn:hover {
   background-color: #17a673 !important; /* Verde al pasar el mouse */
   color: white !important;
+}
 
-  .owl-carousel .owl-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+/* =================================== */
+/*  Experiences Carousel - Vanilla JS 
+/* =================================== */
+.experiences-carousel-wrapper {
+  position: relative;
+}
+
+.experiences-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.experiences-carousel .carousel-item {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.experiences-carousel .carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+
+.experiences-carousel .carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.experiences-carousel .carousel-item .caption {
+  padding: 30px 40px;
+}
+
+.experiences-carousel .carousel-item .caption h6 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.experiences-carousel .carousel-item .caption p {
+  margin-bottom: 0;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(11, 79, 56, 0.8);
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 10;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: rgba(11, 79, 56, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carousel-btn:focus {
+  outline: 2px solid #0B4F38;
+  outline-offset: 2px;
+}
+
+.carousel-prev {
+  left: -25px;
+}
+
+.carousel-next {
+  right: -25px;
+}
+
+/* Dots indicator */
+.carousel-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+
+.carousel-dots:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 1px;
+  background: #eeeeee;
+  z-index: 0;
+}
+
+.carousel-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #eeeeee;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 40px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.carousel-dot:hover {
+  background: #0B4F38;
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background: #0B4F38;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-dot:focus {
+  outline: 2px solid #0B4F38;
+  outline-offset: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .carousel-prev {
+    left: 10px;
   }
+  
+  .carousel-next {
+    right: 10px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .carousel-dot {
+    margin: 0 15px;
+  }
+  
+  .experiences-carousel .carousel-item .caption {
+    padding: 20px;
+  }
+}
 
-/* Elimina los dots del carousel de experiencias */
-.active-works-carousel .owl-dots {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+@media (max-width: 767px) {
+  .carousel-prev {
+    left: 5px;
+  }
+  
+  .carousel-next {
+    right: 5px;
+  }
+  
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .carousel-dots:after {
+    width: 80%;
+  }
 }
