@@ -3269,3 +3269,102 @@ p {
     width: 80%;
   }
 }
+
+/* =================================== */
+/*  SEO Context Section 
+/* =================================== */
+.seo-context-area {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.seo-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.seo-content h2 {
+  color: #0B4F38;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.seo-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.seo-content strong {
+  color: #333;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Designer Credit */
+.designer-credit {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
+}
+
+.designer-credit a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.designer-credit a:hover {
+  color: #fff;
+}
+
+/* Banner Title (for non-primary H1 in slider) */
+.banner-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+@media (max-width: 991px) {
+  .seo-content {
+    padding: 25px;
+  }
+  
+  .banner-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .seo-context-area {
+    padding: 40px 0;
+  }
+  
+  .seo-content {
+    padding: 20px;
+  }
+  
+  .banner-title {
+    font-size: 28px;
+  }
+}
